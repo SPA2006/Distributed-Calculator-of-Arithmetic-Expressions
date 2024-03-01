@@ -2,7 +2,6 @@ package agent
 
 import (
 	"errors"
-	"fmt"
 	"strconv"
 	"strings"
 	"time"
@@ -15,7 +14,6 @@ import (
 // Проверяет на наличие ошибок (zero, bracket, symbol -- calc/test/test.go)
 func Reading_notation(value string, Duration map[model.OperationClass]int) (int, error) {
 	res, err := server.Parse_expression(value)
-	fmt.Println("!!!   ", res)
 
 	if err != nil {
 		if err.Error() == "zero" || err.Error() == "bracket" || err.Error() == "symbol" {
