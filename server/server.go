@@ -2,7 +2,6 @@ package server
 
 import (
 	"errors"
-	"fmt"
 	"strconv"
 
 	model "calc/internal/base_model"
@@ -52,7 +51,6 @@ func Parse_expression(value string) (string, error) {
 
 		} else if _, err := strconv.Atoi(string(value[counter])); err == nil {
 			num, err := Get_string_number(value, &counter)
-			fmt.Println(num, "?????")
 
 			if err != nil {
 				if err.Error() == "zero" {
@@ -61,7 +59,6 @@ func Parse_expression(value string) (string, error) {
 			}
 
 			output += num + " "
-			fmt.Println("output: ", output)
 		} else {
 			for len(stek) > 0 && model.Priority(rune(value[counter])) <= model.Priority(stek[len(stek)-1]) {
 				output += string(stek[len(stek)-1]) + " "
@@ -71,11 +68,6 @@ func Parse_expression(value string) (string, error) {
 			stek = append(stek, rune(value[counter]))
 		}
 
-		for i := 0; i < len(stek); i++ {
-			fmt.Print(stek[i], " ")
-		}
-		fmt.Println()
-		fmt.Println(output)
 		counter++
 	}
 	// если что-то осталось, то переводим это в выходную строку
