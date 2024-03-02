@@ -22,6 +22,8 @@ func Reading_notation(value string, Duration map[model.OperationClass]int) (int,
 	}
 
 	res_separated := strings.Split(res, " ")
+	res_separated = res_separated[:len(res_separated)-1]
+
 	for i := 0; i < len(res_separated); i++ {
 		if _, err := strconv.Atoi(res_separated[i]); err != nil {
 			break
@@ -70,10 +72,11 @@ func Reading_notation(value string, Duration map[model.OperationClass]int) (int,
 			stek = stek[:len(stek)-2]
 			stek = append(stek, strconv.Itoa(<-mem3))
 		} else if _, err := strconv.Atoi(res_separated[counter]); err == nil {
-			stek = append(stek, string(res[counter]))
+			stek = append(stek, res_separated[counter])
 		} else {
 			return 0, errors.New("letter")
 		}
+		counter++
 	}
 
 	ans, _ := strconv.Atoi(stek[0])
