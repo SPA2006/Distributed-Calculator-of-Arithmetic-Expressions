@@ -2,13 +2,7 @@
 ### Yandex Go Course Project
 Медленный калькулятор (Slow Calc)
 
-По всем вопросам:
-###### tg: @Sergey_Poltorak
-
 ###### примеры curl запросов идут далее
-
-
-##### // ————————————————————————
 
 ##### Это мой первый проект, который выполняет:
  - Запрос времени исполнения операций
@@ -16,16 +10,38 @@
  - Переводит выражение в обратную польскую нотацию
  - Выдаёт ответ выисления
 
+##### Что не получилось:
+- Написать фронт, базу данных (Postgres, SQLlite)
+- Реализовать решение через Docker или Docker Compose, поскольку команда
+```
+nvm install touch-cli -g
+```
+- Выдаёт ошибку
+```
+Error retrieving "https://nodejs.org/dist/latest-touch-cli/SHASUMS256.txt": HTTP Status 404
+```
+
+##### Какие цели стоят:
+- Написать фронт
+- Прописать базу данных и хранить выражение(-я) и промежуточные вычисления на ней
+- Реализовать контроль воркеров
+
 Попробовал сделать на минимальный балл
 
-##### Для запуска микросервиса скачайте файлы с директории, либо импортируйте как модуль
-##### https://github.com/SPA2006/Distributed-Calculator-of-Arithmetic-Expressions/
-##### и запустите Distributed-Calculator-of-Arithmetic-Expressions/main/main.go
-##### go run Distributed-Calculator-of-Arithmetic-Expressions/main/main.go
+## HOW TO INSTALL
+
+##### Copy git repo for using if you had done that, otherwise:
+``` bash
+git clone https://github.com/SPA2006/Distributed-Calculator-of-Arithmetic-Expressions.git
+```
+##### and run Distributed-Calculator-of-Arithmetic-Expressions/main/main.go
+```
+go run Distributed-Calculator-of-Arithmetic-Expressions/main/main.go
+```
 
 
 
-### curl запросы
+## curl запросы
 
 #### Output duration of operations
 ``` bash
