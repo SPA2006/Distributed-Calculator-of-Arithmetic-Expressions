@@ -60,6 +60,7 @@ func Parse_expression(value string) (string, error) {
 
 			output += num + " "
 		} else {
+
 			for len(stek) > 0 && model.Priority(rune(value[counter])) <= model.Priority(stek[len(stek)-1]) {
 				output += string(stek[len(stek)-1]) + " "
 				stek = stek[:len(stek)-1]
@@ -70,16 +71,9 @@ func Parse_expression(value string) (string, error) {
 
 		counter++
 	}
+
 	// если что-то осталось, то переводим это в выходную строку
 	for len(stek) > 0 {
-		if stek[len(stek)-1] == '(' {
-			return "", errors.New("bracket")
-		}
-
-		if stek[len(stek)-1] == '+' || stek[len(stek)-1] == '-' || stek[len(stek)-1] == '*' || stek[len(stek)-1] == '/' {
-			return "", errors.New("symbol")
-		}
-
 		output += string(stek[len(stek)-1]) + " "
 		stek = stek[:len(stek)-1]
 	}
