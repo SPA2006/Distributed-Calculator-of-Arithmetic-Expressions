@@ -1,5 +1,5 @@
 ### Yandex Go Course Project
-Медленный калькулятор (Slow Calc), работающий на технологиях gRPC, SQLite и JWT
+Медленный калькулятор (Slow Calc), работающий на технологиях REST API, gRPC, SQLite и JWT
 
 ###### для контактов:
 ###### tg: @Sergey_Poltorak
