@@ -1,0 +1,12 @@
+env: "local"
+storage_path: "github.com/SPA2006/Distributed-Calculator-of-Arithmetic-Expressions/internal/database/store.db"
+
+grpc:
+  port: 8081
+  timeout: 5s
+
+http:
+  addr: "localhost:8080"
+  max_header_bytes: 1
+  read_timeout: 10s
+  write_timeout: 10s
