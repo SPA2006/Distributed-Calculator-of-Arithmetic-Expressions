@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package agent_proto;
+
+option go_package = "github.com/SPA2006/Distributed-Calculator-of-Arithmetic-Expressions/";
+
+service Agent {
+    rpc CalculateExpression (ExpressionToCalculateRequest) returns (Response) {}
+}
+
+message ExpressionToCalculateRequest {
+    int64 id = 1;
+    string expresion = 2;
+    int64 userID = 3;
+    int64 TimePower = 4;
+    int64 TimeMultiplication = 5;
+    int64 TimeDivision = 6;
+    int64 TimeAddition = 7;
+    int64 TimeSubstraction = 8;
+}
+
+message Response {
+    string result = 2;
+}
