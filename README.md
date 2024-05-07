@@ -1,4 +1,4 @@
-### Yandex Go Course Project
+### Yandex Go Course Final Project
 Медленный калькулятор (Slow Calc), работающий на технологиях REST API, gRPC, SQLite и JWT
 
 ###### для контактов:
